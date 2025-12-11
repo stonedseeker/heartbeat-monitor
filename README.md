@@ -8,12 +8,12 @@ This system processes heartbeat events from multiple services and triggers alert
 
 ## Features
 
-- ✅ Detects missed heartbeats based on configurable intervals
-- ✅ Handles unordered events (sorts chronologically per service)
-- ✅ Gracefully handles malformed events without crashing
-- ✅ Type-safe implementation with TypeScript
-- ✅ Comprehensive test coverage (30 tests)
-- ✅ Returns at most one alert per service
+-  Detects missed heartbeats based on configurable intervals
+-  Handles unordered events (sorts chronologically per service)
+-  Gracefully handles malformed events without crashing
+-  Type-safe implementation with TypeScript
+-  Comprehensive test coverage (30 tests)
+-  Returns at most one alert per service
 
 ## Quick Start
 
@@ -253,10 +253,10 @@ The test suite includes all required test cases:
 
 ### Required Test Cases (Assignment Specification)
 
-1. **✅ Working Alert Case** - Service misses 3+ heartbeats
-2. **✅ Near-Miss Case** - Service misses only 2 heartbeats (no alert)
-3. **✅ Unordered Input** - Events arrive out of chronological order
-4. **✅ Malformed Events** - Invalid/incomplete events are handled gracefully
+1. ** Working Alert Case** - Service misses 3+ heartbeats
+2. ** Near-Miss Case** - Service misses only 2 heartbeats (no alert)
+3. ** Unordered Input** - Events arrive out of chronological order
+4. ** Malformed Events** - Invalid/incomplete events are handled gracefully
 
 ### Additional Test Cases
 
@@ -266,7 +266,7 @@ The test suite includes all required test cases:
 8. Multiple gaps (only first alert emitted)
 9. Service grouping correctness
 
-**Total: 30 tests, all passing ✅**
+**Total: 30 tests, all passing **
 
 ### Running Specific Tests
 ```bash
@@ -423,25 +423,6 @@ npm run build
 ```bash
 # Run tests with verbose output
 npm test -- --verbose
-
-# Run specific test
-npm test -- --testNamePattern="should trigger alert"
-```
-
-### Type Errors
-
-- Ensure TypeScript version is 5.x: `npm list typescript`
-- Check `tsconfig.json` for strict mode settings
-
-## License
-
-MIT
-
-## Author
-
-Vaibhav
-
----
 
 **Assignment Completion Checklist:**
 
