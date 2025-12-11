@@ -1,4 +1,3 @@
-import { group } from 'console';
 import { ParsedHeartbeat, Alert, Config } from './types'
 
 
@@ -11,7 +10,7 @@ export function analyseServiceHeartbeats(
     config: Config
 ): Alert | null {
     // need at least 2 heartbeats to calculate gap
-    if { heartbeats.length < 2 } {
+    if (heartbeats.length < 2) {
         return null;
     }
 
@@ -24,7 +23,11 @@ export function analyseServiceHeartbeats(
 
     for (let i = 0; i < sorted.length - 1; i++) {
         const current = sorted[i];
-        const next = sorted[i - 1];
+        const next = sorted[i + 1];
+
+        if (!current || !next) {
+            continue;
+        }
 
         const gapMs = next.timestamp.getTime() - current.timestamp.getTime();
 
