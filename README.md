@@ -424,7 +424,7 @@ npm run build
 # Run tests with verbose output
 npm test -- --verbose
 
-**Assignment Completion Checklist:**
+Assignment Completion Checklist:
 
 -  Implements heartbeat monitoring system
 -  Sorts events per service chronologically
